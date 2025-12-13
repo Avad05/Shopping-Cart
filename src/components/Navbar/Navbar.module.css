@@ -1,0 +1,20 @@
+.navigation{
+    display: flex;
+    width: 100vw;
+    
+    justify-content: space-around;
+    background-color: rgb(0, 6, 6);
+    padding: 1rem;
+    font-size: 30px;
+}
+
+.inputtext{
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.white{
+    color:white;
+}
