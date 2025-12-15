@@ -1,0 +1,46 @@
+.image{
+    height: 100px;
+    width: 100px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 250px;
+    gap: 0px;
+    border: 2px solid black;
+    border-radius: 11px;
+    justify-content: space-between;
+    padding-top: 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.shop{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, auto);
+    margin-left: 8rem;
+    gap: 9px;
+}
+
+.imagCont{
+    border-bottom: 2px solid black;
+}
+
+.productTitle{
+   border-bottom: 2px solid black;
+}
+.productPrice{
+    border-bottom: 2px solid black;
+}
+.links{
+    color: black;
+}

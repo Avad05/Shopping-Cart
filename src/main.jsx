@@ -7,6 +7,7 @@ import Cart from './pages/Cart.jsx'
 import Home from './pages/Home.jsx'
 import Shop from './pages/Shop.jsx'
 import Layout from './components/Layout/Layout.jsx'
+import SingleProduct from './pages/SingleProduct.jsx'
 import { CartProvider } from './CartContext/CartContext.jsx'
 
 const router = createBrowserRouter(
@@ -17,7 +18,9 @@ const router = createBrowserRouter(
       children:[
         {index: true, element:<Home />},
         {path:"shop", element:<Shop />},
+        {path:"shop/:id", element:<SingleProduct />},
         {path:"cart", element:<Cart />},
+        
       ]
     }
   ]
