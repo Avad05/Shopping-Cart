@@ -1,26 +1,28 @@
-import React from 'react'
-import { useCart } from '../CartContext/CartContext'
-import Shop from './Shop';
-
-const Cart = () => {
-
-  const{
-    cartItems,
-    addToCart,
-    increaseQty,
-    decreaseQty,
-    removeFromCart
-  } = useCart();
+import { useCart } from "../CartContext/CartContext";
+import CartItem from "../components/CartItem/CartItem";
+import Cart from '../pages/Cart.module.css';
 
 
-  return (
-    <div>
-        <h1>Cart Page</h1>
-       
-        <button onClick={ () => increaseQty(id)}>IncreaseQty</button>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis nam, tempora adipisci sunt nostrum voluptatem rem. Ex magni similique voluptas veritatis perferendis nihil impedit temporibus, doloremque incidunt nam corrupti fugit.</p>
+const cart = () =>{
+
+  const {cartItems} = useCart();
+
+  if(cartItems.length === 0){
+    return <>
+           <img src="../src/assets/empty.jpg" alt="empty cart" className={Cart.khali}></img>
+           </>
+  }
+
+  return(
+    < div>
+     <h1>Your Cart</h1>
+      
+     {cartItems.map(item => (
+       <CartItem key={item.id} item={item}/>
+     ))}
     </div>
   )
+
 }
 
-export default Cart
+export default cart;

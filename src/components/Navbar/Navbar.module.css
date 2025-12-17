@@ -1,10 +1,11 @@
 .navigation{
     display: flex;
     width: 100vw;
-    
-    justify-content: space-around;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: rgb(0, 6, 6);
-    padding: 1rem;
+    padding: 0px;
     font-size: 30px;
 }
 

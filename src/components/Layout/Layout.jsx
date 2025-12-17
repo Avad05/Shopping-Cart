@@ -3,10 +3,14 @@ import { Outlet } from "react-router-dom";
 import styles from './Layout.module.css'
 
 export default function Layout(){
-    return(        
-        <div className={styles.layout}>
+    return( 
+        <div>       
+        <div >
        <div className="navigation"> <Navbar /> </div>
-        <Outlet />
         </div>
+        <div className={styles.layout}>
+         <Outlet />
+         </div>
+         </div>
     )
 }

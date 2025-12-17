@@ -1,0 +1,10 @@
+.empty{
+    text-align: justify;
+    background-color: aqua;
+}
+
+.khali{
+    height: 90vh;
+    border: 2px solid white;
+    width: auto;
+}

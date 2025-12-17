@@ -3,7 +3,7 @@ import style from './Home.module.css'
 
 const Home = () => {
   return (
-    <div>
+    <div className={style.container}>
       <img src="../src/assets/Supplement.png" className={style.supplement} alt="supplement stack" />
         <h1>Our Range of Products</h1>
         <div className={style.protein}>
