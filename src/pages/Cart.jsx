@@ -5,7 +5,7 @@ import Cart from '../pages/Cart.module.css';
 
 const cart = () =>{
 
-  const {cartItems} = useCart();
+  const {cartItems, getTotalPrice} = useCart();
 
   if(cartItems.length === 0){
     return <>
@@ -20,6 +20,9 @@ const cart = () =>{
      {cartItems.map(item => (
        <CartItem key={item.id} item={item}/>
      ))}
+      
+      <h2 className={Cart.total}>Total Price: ${getTotalPrice()}</h2>
+
     </div>
   )
 

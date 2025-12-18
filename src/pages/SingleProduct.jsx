@@ -47,7 +47,7 @@ const SingleProduct = () => {
           <button onClick={increment} className={styles.button}>+</button>
         </div>
 
-        <button onClick={() => addToCart(product, quantity)}>
+        <button onClick={() => addToCart(product, quantity)} className={styles.toCart}>
           Add to Cart
         </button>
       </div>      

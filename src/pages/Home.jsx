@@ -1,27 +1,43 @@
 import React from 'react'
 import style from './Home.module.css'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
+import {Link as Linkicon} from 'lucide-react'
 
 const Home = () => {
+   const[products, setProducts] = useState([]);
+  useEffect(() =>{    
+    fetch("https://fakestoreapi.com/products?limit=4")
+    .then(res => res.json())
+    .then(data => setProducts(data))
+    .catch(error => console.log(error));
+  },[])
+
   return (
     <div className={style.container}>
-      <img src="../src/assets/Supplement.png" className={style.supplement} alt="supplement stack" />
-        <h1>Our Range of Products</h1>
-        <div className={style.protein}>
-          <img src='../src/assets/Protein.png' className={style.whey} alt='Whey Protein'/>
-          <div>
-            <h2 className={style.h2}>Protein</h2>
-            <p><b>Muscle & Performance:</b> Protein is the essential building block that drives muscle repair and growth after every workout.</p>
-            <p><b>Metabolism & Satiety:</b> Beyond fitness, protein is a powerful tool for weight management. </p>
+      <img src="../src/assets/banner.jpg" className={style.supplement} alt="supplement stack" />
+        <h1>Featured Products</h1>
+        <div className={style.container1}>
+        <div className={style.grid}>
+        {products.map(product => (
+          <div key={product.id} className="card">
+            <img src={product.image} alt={product.title} className={style.image}/>
+            <h3>{product.title}</h3>
+            <Link to={`shop/${product.id}`}><Linkicon /></Link>
           </div>
+        ))}
+      </div>
         </div>
-        <div className={style.energy}>          
-          <div>
-            <h2 className={style.h2}>Energy</h2>
-            <p><b>Sustained Power:</b> Go from sluggish to focused and energized in minutes, not hours. Our formula delivers clean, crash-free power that lasts all day</p>
-            <p><b>Sharpen Your Focus:</b> This is more than just energy—it’s enhanced productivity. Key nootropics in our blend help sharpen concentration, improve reaction time, and cut through brain fog.</p>            
-          </div>
-          <img src='../src/assets/Energy.png' className={style.creamp} alt='Energy Booster'/>
-        </div>
+        
+        <section>
+  <h1>Why This Shop?</h1>
+  <ul className={style.flex}>
+    <li>Built with React & Hooks</li>
+    <li>Global cart using Context API</li>
+    <li>Dynamic routing with React Router</li>
+    <li>Fully tested with RTL</li>
+  </ul>
+</section>
 
         <footer className={style.footer}>
           <p>Made with ❤️ from Mumbai </p>

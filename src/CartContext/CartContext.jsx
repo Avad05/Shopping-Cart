@@ -54,6 +54,14 @@ export function CartProvider({children}){
         return cartItems.reduce((sum, item) => sum + item.quantity, 0)
      }   
 
+     function getTotalPrice(){
+        const total = 
+            cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+             
+
+            return total.toFixed(2);
+         }
+
 
      return(
         <CartContext.Provider value={{
@@ -62,7 +70,8 @@ export function CartProvider({children}){
             increaseQty,
             decreaseQty,
             removeFromCart,
-            getTotalItems
+            getTotalItems,
+            getTotalPrice
         }}>
             {children}
         </CartContext.Provider>

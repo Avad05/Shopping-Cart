@@ -23,16 +23,30 @@
     justify-content: center;
     gap: 3px;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .button{
-    background-color: antiquewhite;
+    background-color: white;
     color: black;
 }
-
+.button:hover{
+    border-color: white;
+}
 p{
    border: 2px solid black;
    margin: 30px;
    border-radius: 10px; 
    padding: 5px;
+}
+
+.toCart{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.toCart:hover{
+    border-color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }

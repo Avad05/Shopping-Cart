@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect, useContext} from 'react';
 import { useCart } from '../CartContext/CartContext'
 import noty from "../pages/Shop.module.css"
-import { Link } from 'react-router-dom';
+import { Link,useSearchParams } from 'react-router-dom';
 
 
 const Shop = () => {
@@ -18,6 +18,12 @@ const Shop = () => {
   })       
    
   },[])
+  const [searchParams] = useSearchParams();
+  const searchTerm = searchParams.get("search") || "";
+
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const {addToCart} = useCart();
 
@@ -27,7 +33,7 @@ const Shop = () => {
 
   return (
     <div>
-        <h1>Shop Page</h1>
+        <h1>Shop</h1>
                 
         <div className={noty.shop}>
         {products.map((product) =>(
