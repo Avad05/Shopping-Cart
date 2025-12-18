@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
 .supplement{
     height: 60vh;
     width: 90vw;
@@ -29,6 +32,9 @@
 .h2{
     font-size: 40px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h1{
+    font-family: 'Dancing Script', sans-serif;
 }
 
 .creamp{
@@ -111,4 +117,5 @@ li{
     padding: 5px;
     list-style: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: "Luxurious Roman", serif;
 }

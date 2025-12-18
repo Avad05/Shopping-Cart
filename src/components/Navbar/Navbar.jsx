@@ -20,11 +20,10 @@ const Navbar = () => {
   const {getTotalItems} = useCart();
   return (
     <div className={styles.navigation}>
-    <Link to="/">MuscleX</Link>   
-    <NavLink className={(e) => {return e.isActive?styles.white:""}} to="/">Home</NavLink>
-    <NavLink className={(e) => {return e.isActive?styles.white:""}} to="shop">Shop</NavLink>
-    
-    <NavLink className={(e) => {return e.isActive?styles.white:""}} to="cart">
+    <Link to="/" className={styles.name}>BuyNest</Link>   
+    <NavLink className={(e) => {return e.isActive?styles.white:styles.black}} to="/">Home</NavLink>
+    <NavLink className={(e) => {return e.isActive?styles.white:styles.black}} to="shop">Shop</NavLink>
+    <NavLink className={(e) => {return e.isActive?styles.white:styles.black}} to="cart">
       <ShoppingCart/><sup>{getTotalItems()}</sup>
       </NavLink>    
     </div>

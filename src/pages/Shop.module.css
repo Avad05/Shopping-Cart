@@ -42,10 +42,16 @@
 }
 
 .productTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
    border-bottom: 2px solid black;
 }
 .productPrice{
-    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .links{
     color: black;
@@ -60,4 +66,11 @@
 .button:hover{
     text-decoration: none;
     border: black;
+}
+
+.productDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -1,6 +1,7 @@
 import { useCart } from "../../CartContext/CartContext";
 import dress from '../CartItem/CartItem.module.css'
 import {Trash2} from 'lucide-react';
+import PropTypes from "prop-types";
 
 const CartItem = ({item}) =>{
     const{
@@ -38,3 +39,14 @@ const CartItem = ({item}) =>{
 }
 
 export default CartItem;
+
+
+CartItem.PropTypes = {
+    item: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        quantity: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired       
+    }).isRequired
+}
