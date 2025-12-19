@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useCart } from "../CartContext/CartContext";
 import styles from "../pages/SingleProduct.module.css";
+import { Link } from "react-router-dom";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -50,6 +51,8 @@ const SingleProduct = () => {
         <button onClick={() => addToCart(product, quantity)} className={styles.toCart}>
           Add to Cart
         </button>
+
+        <Link to="/shop"><button className={styles.shop}>Shop More</button></Link>
       </div>      
     </div>
       <div>

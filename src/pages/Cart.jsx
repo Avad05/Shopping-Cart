@@ -1,6 +1,7 @@
 import { useCart } from "../CartContext/CartContext";
 import CartItem from "../components/CartItem/CartItem";
 import Cart from '../pages/Cart.module.css';
+import { Link } from "react-router-dom";
 
 
 const cart = () =>{
@@ -23,6 +24,10 @@ const cart = () =>{
       
       <h2 className={Cart.total}>Total Price: ${getTotalPrice()}</h2>
 
+      <div className={Cart.buttons}>
+      <Link to="/shop"><button className={Cart.shop}>Shop More</button></Link>
+      <button className={Cart.checkOut}>Checkout</button>
+      </div>
     </div>
   )
 

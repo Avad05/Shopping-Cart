@@ -10,6 +10,7 @@
     background-color: rgb(0, 6, 6);
     padding: 0px;
     font-size: 30px;
+    position: fixed;
 }
 
 .inputtext{
@@ -25,15 +26,23 @@
     font-family: "Luxurious Roman", serif;
 }
 
+.white:hover{
+    color:white;
+    border-bottom: 2px solid white;
+    font-family: "Luxurious Roman", serif
+}
+
 sup{
     color: red;
     font-size: large;
 }
 
 .name{
+    display: flex;
     font-family: 'Noto Serif' ;
     color: #2dd4bf;
     font-size: 55px;
+    align-items: center;
 }
 
 .name:hover{
@@ -42,4 +51,16 @@ sup{
 
 .black{
     font-family: "Luxurious Roman", serif;
+    color: goldenrod;
+}
+
+.black:hover{
+    font-family: "Luxurious Roman", serif;
+    color: goldenrod;
+}
+
+.logo{
+    height: 70px;
+    width: 180px;
+    border-radius: 5px;
 }
