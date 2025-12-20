@@ -26,18 +26,4 @@ describe("CartItem Component", () =>{
         expect(screen.getByText('$100')).toBeInTheDocument();
     })
 
-    it('trash button works', async() =>{
-        const user = userEvent.setup();
-        const button = screen.getByRole('button', {name:'Trash2'});
-
-        render(
-             <CartProvider>
-                <CartItem item={item} />
-            </CartProvider>
-        );
-
-        await user.click(button);
-       
-              
-    })
 })

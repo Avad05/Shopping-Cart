@@ -34,7 +34,7 @@ const SingleProduct = () => {
   }
 
   return (
-    <>
+    <div className={styles.container}>
     <div className={styles.productCard}>
       <img src={product.image} alt={product.title} className={styles.image} />
 
@@ -55,11 +55,11 @@ const SingleProduct = () => {
         <Link to="/shop"><button className={styles.shop}>Shop More</button></Link>
       </div>      
     </div>
-      <div>
+      <div className={styles.more}>
      <h1>More About this Product</h1>
       <p>{product.description}</p>
       </div>
-      </>
+      </div>
   );
 };
 
