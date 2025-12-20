@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cart Component > renders cart 1`] = `
+<div>
+  <cart />
+</div>
+`;
