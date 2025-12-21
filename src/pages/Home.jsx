@@ -3,7 +3,7 @@ import style from './Home.module.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import {Link as Linkicon} from 'lucide-react'
-import banner from '../assets/banner.jpg'
+import banner from '/images/banner.jpg'
 
 const Home = () => {
    const[products, setProducts] = useState([]);
