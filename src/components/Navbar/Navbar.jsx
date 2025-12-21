@@ -5,7 +5,7 @@ import { useCart } from '../../CartContext/CartContext'
 import {ShoppingCart} from 'lucide-react'
 import { useNavigate} from 'react-router-dom'
 import { useState } from 'react'
-import logo from '../src/assets/logo.png'
+import logo from '../Navbar/logo.png'
 
 const Navbar = () => {
 

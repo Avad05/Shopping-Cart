@@ -2,7 +2,7 @@ import { useCart } from "../CartContext/CartContext";
 import CartItem from "../components/CartItem/CartItem";
 import Carts from '../pages/Cart.module.css';
 import { Link } from "react-router-dom";
-import empty from '../src/assets/empty.jpg'
+import empty from '../assets/empty.jpg'
 
 
 const Cart = () =>{
