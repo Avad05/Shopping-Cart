@@ -2,6 +2,7 @@ import { useCart } from "../CartContext/CartContext";
 import CartItem from "../components/CartItem/CartItem";
 import Carts from '../pages/Cart.module.css';
 import { Link } from "react-router-dom";
+import empty from '../src/assets/empty.jpg'
 
 
 const Cart = () =>{
@@ -10,7 +11,7 @@ const Cart = () =>{
 
   if(cartItems.length === 0){
     return <>
-           <img src="../src/assets/empty.jpg" alt="empty cart" className={Carts.khali}></img>
+           <img src={empty} alt="empty cart" className={Carts.khali}></img>
            </>
   }
 

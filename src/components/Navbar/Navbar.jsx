@@ -5,7 +5,7 @@ import { useCart } from '../../CartContext/CartContext'
 import {ShoppingCart} from 'lucide-react'
 import { useNavigate} from 'react-router-dom'
 import { useState } from 'react'
-
+import logo from '../src/assets/logo.png'
 
 const Navbar = () => {
 
@@ -20,7 +20,7 @@ const Navbar = () => {
   const {getTotalItems} = useCart();
   return (
     <div className={styles.navigation}>
-    <Link to="/" className={styles.name}><img src='../src/assets/logo.png' alt='logo' className={styles.logo}/></Link>   
+    <Link to="/" className={styles.name}><img src={logo} alt='logo' className={styles.logo}/></Link>   
     <NavLink className={(e) => {return e.isActive?styles.white:styles.black}} to="/">Home</NavLink>
     <NavLink className={(e) => {return e.isActive?styles.white:styles.black}} to="shop">Shop</NavLink>
     <NavLink className={(e) => {return e.isActive?styles.white:styles.black}} to="cart">

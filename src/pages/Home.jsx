@@ -3,6 +3,7 @@ import style from './Home.module.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import {Link as Linkicon} from 'lucide-react'
+import banner from '../assets/banner.jpg'
 
 const Home = () => {
    const[products, setProducts] = useState([]);
@@ -15,7 +16,7 @@ const Home = () => {
 
   return (
     <div className={style.container}>
-      <img src="../src/assets/banner.jpg" className={style.supplement} alt="supplement stack" />
+      <img src={banner} className={style.supplement} alt="supplement stack" />
         <h1>Featured Products</h1>
         <div className={style.container1}>
         <div className={style.grid}>
