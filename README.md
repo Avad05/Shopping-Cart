@@ -1,16 +1,110 @@
-# React + Vite
+# 🛒 Shopping Cart Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **Shopping Cart web application** built with **React** to learn and practice **React Hooks**, **dynamic routing**, and **component testing**.
+Product data is fetched from an external API, and the application is fully tested using **React Testing Library (RTL)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* Fetches product data from an external API
+* Product listing and detail pages
+* Add/remove items from cart
+* Cart state management using React Hooks
+* Dynamic routing with React Router
+* Fully tested UI components
+* Responsive and user-friendly interface
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React
+* **Routing:** React Router
+* **State Management:** React Hooks (`useState`, `useEffect`, `useContext`)
+* **API:** External product API
+* **Testing:** React Testing Library (RTL), Jest
+* **Styling:** CSS / Module CSS *(adjust if needed)*
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── ProductCard.jsx
+│   ├── CartItem.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Product.jsx
+│   └── Cart.jsx
+├── context/
+│   └── CartContext.jsx
+├── routes/
+├── tests/
+│   └── cart.test.jsx
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 🔁 Routing
+
+* `/` → Product listing
+* `/product/:id` → Dynamic product details page
+* `/cart` → Shopping cart
+
+---
+
+## 🧪 Testing
+
+* Component testing using **React Testing Library**
+* User interaction testing (add/remove items)
+* Routing behavior tested
+* Cart logic and UI fully covered
+
+---
+
+## 🧑‍💻 Getting Started
+
+### Prerequisites
+
+* Node.js (v16+ recommended)
+* npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/shopping-cart.git
+cd shopping-cart
+npm install
+npm run dev
+```
+
+---
+
+## 📌 Learning Outcomes
+
+* Understanding React Hooks in real-world scenarios
+* Handling API data fetching
+* Implementing dynamic routes
+* Writing maintainable component tests
+* Building scalable React project structure
+
+---
+
+## 🔮 Future Improvements
+
+* Persist cart data using localStorage
+* Add quantity management
+* Improve UI/UX
+* Add checkout flow
+* Backend integration
+
+---
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
