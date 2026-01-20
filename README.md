@@ -24,7 +24,7 @@ Product data is fetched from an external API, and the application is fully teste
 * **State Management:** React Hooks (`useState`, `useEffect`, `useContext`)
 * **API:** External product API
 * **Testing:** React Testing Library (RTL), Jest
-* **Styling:** CSS / Module CSS *(adjust if needed)*
+* **Styling:** CSS / Module CSS 
 
 ---
 
